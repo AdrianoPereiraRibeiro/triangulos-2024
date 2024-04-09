@@ -23,6 +23,9 @@
                 case 2:
                     Console.WriteLine("O triângulo é escaleno. ");
                     break;
+                case 3:
+                    Console.WriteLine("Isso não é um triangulo");
+                    break;
             }
         }
 
