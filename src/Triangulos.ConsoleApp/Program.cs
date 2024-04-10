@@ -5,29 +5,12 @@
         static void Main(string[] args)
         {
             TrianguloChecando tr = CapturarValores();
-            int retorno = tr.ProcessamentoIF();
-            VerificarTipoTriangulo(retorno);
+            string resposta = tr.ProcessamentoIF();
+            Console.WriteLine(resposta);
             Console.ReadLine();
         }
 
-        public static void VerificarTipoTriangulo(int retorno)
-        {
-            switch (retorno)
-            {
-                case 0:
-                    Console.WriteLine("O triângulo é equilátero.");
-                    break;
-                case 1:
-                    Console.WriteLine("O triângulo é isósceles. ");
-                    break;
-                case 2:
-                    Console.WriteLine("O triângulo é escaleno. ");
-                    break;
-                case 3:
-                    Console.WriteLine("Isso não é um triangulo");
-                    break;
-            }
-        }
+
 
         public static TrianguloChecando CapturarValores()
         {

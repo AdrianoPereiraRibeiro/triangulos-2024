@@ -8,23 +8,29 @@
             public double y;
             public double z;
             public int retorno;
-            public int fail;
-            public int ProcessamentoIF()
+            public string resposta;
+            public string ProcessamentoIF()
             {
-                if (x + y < z || x + z < y || y + z < x) { retorno = 3; }
-                else
+                if (x == y || y == z || x == z) { retorno = 1; };
+                if (x == y && x == z && y == z) { retorno = 0; };
+                if (x != y && x != z && y != z) { retorno = 2; };
+
+                switch (retorno)
                 {
-                    if (x == y || y == z|| x==z) { retorno = 1; };
-                    if (x == y && x == z && z==y) { retorno = 0; };
-                    if (x != y && x != z && y != z) { retorno = 2; };
+                    case 0:
+                        resposta = ("O triângulo é equilátero.");
+                        break;
+                    case 1:
+                        resposta = ("O triângulo é isósceles. ");
+                        break;
+                    case 2:
+                        resposta = ("O triângulo é escaleno. ");
+                        break;
                 }
-                return retorno;
-                
+                return resposta;
             }
-
-
-
 
         }
     }
+    
 }
